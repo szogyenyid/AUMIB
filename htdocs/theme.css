@@ -1,0 +1,14 @@
+th.index, tr.index{
+	text-align: center;
+    padding: 8px;
+	border-bottom: 3px solid #f0f0f0;
+}
+td.index{
+	border-bottom: 1px solid #f0f0f0;
+}
+
+table.index{
+	text-align: center;
+	width: 750px;
+	padding: 5px;
+}
