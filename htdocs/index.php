@@ -22,7 +22,12 @@
 		<th class="index">Description</th>
 	<?php while ($row = mysqli_fetch_array($cats)): ?>
 		<tr class="index">
-			<td class="index"><?= $row['Id'] ?></td>
+		<?php $id = $row['Id']?>
+		
+			<td class="index">
+			<a href="board.php?cat=<?= $id?>"><?= $id ?></a>
+			</td>
+			
 			<td class="index"><?= $row['Name'] ?></td>
 			<td class="index"><?= $row['Description'] ?></td>
 		</tr>
