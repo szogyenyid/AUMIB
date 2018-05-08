@@ -7,9 +7,8 @@
 <!--------------------------------------------------------------------------------->
 	<body>
 	
-	<!-- PHP to load contant header -->
+	<!-- PHP to load constant header -->
 	<!-- Banner -->
-	<!-- List of boards in table, with hyperlink -->
 	<?php
 	include 'connect.php';
 	$link = getDB();
