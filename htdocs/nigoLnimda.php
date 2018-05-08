@@ -5,6 +5,7 @@
 <!-------------------------------------------------------------->
 <body>
 	<h1>Admin's control panel</h1>
+	<p><a href = "index.php">Back to main page</a></p>
 	<h3>Add new category<h3>
 	<form action="nigoLnimda.php" method="post">
 		Abbr: <input type="text" name="abbr"><br>
