@@ -6,9 +6,7 @@
 	</head>
 <!--------------------------------------------------------------------------------->
 	<body>
-	
 	<!-- PHP to load constant header -->
-	<!-- Banner -->
 	<?php
 	include 'connect.php';
 	$link = getDB();
