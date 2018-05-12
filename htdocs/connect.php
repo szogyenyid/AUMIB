@@ -8,7 +8,7 @@ function getDB(){
 		echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
 		exit;
 	}
-	mysqli_query($link, "set character_set_results='utf8'");
+	mysqli_query($link, "SET CHARACTER SET utf8");
 	return $link;
 }
 
