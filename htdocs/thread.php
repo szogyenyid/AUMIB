@@ -1,6 +1,7 @@
+<?php include("header.php") ?>
 <?php
 	if(isset($_GET['id'])){
-		include 'connect.php';
+		//include 'connect.php';
 		$link = getDB();
 		$threadId = mysqli_real_escape_string($link, $_GET['id']);
 		$query = "SELECT * FROM threads WHERE " . "Id=" . $threadId . ";";
@@ -25,7 +26,7 @@
 		<title><?= $threadTitle?> - AUMIB</title>
 	</head>
 	<body>
-		<!-- Header -->
+		<!-- Header --><!-- DONE -->
 		<!-- New reply --><!-- DONE -->
 		<form action="thread.php?id=<?=$threadId?>" method="post">
 			Img-URL: <input type="text" name="imgurl"><br>
@@ -55,6 +56,10 @@
 		</tr>
 		<?php endwhile; ?>
 		</table>
-		<!-- Footer -->
+		<!-- Footer --><!-- DONE -->
+		<?php include ("footer.php") ?>
 	</body>
 </html>
+<?php
+	mysqli_close($link);
+?>

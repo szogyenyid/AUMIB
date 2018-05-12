@@ -1,6 +1,7 @@
+<?php include("header.php") ?>
 <?php
 	if(isset($_GET['cat'])){
-		include 'connect.php';
+		//include 'connect.php';
 		$link = getDB();
 		$category=mysqli_real_escape_string($link, $_GET['cat']);
 		$query = "SELECT * FROM categories WHERE " . "Id='" . $category . "';";
@@ -31,7 +32,7 @@
 		<title><?= $catName?> - AUMIB</title>
 	</head>
 	<body>
-		<!-- Header -->
+		<!-- Header --><!-- DONE -->
 		<!-- Start new thread --><!-- DONE -->
 		<form action="board.php?cat=<?=$category?>" method="post">
 		Img-URL: <input type="text" name="imgurl"><br>
@@ -56,7 +57,8 @@
 			</tr>
 			<?php endwhile; ?>
 		</table>
-		<!-- Footer -->
+		<!-- Footer --><!-- DONE -->
+		<?php include ("footer.php") ?>
 	</body>
 </html>
 

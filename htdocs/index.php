@@ -6,9 +6,10 @@
 	</head>
 <!--------------------------------------------------------------------------------->
 	<body>
-	<!-- PHP to load constant header -->
+	<!-- PHP to load constant header --><!-- DONE -->
+	<?php include("header.php") ?>
 	<?php
-	include 'connect.php';
+	//include 'connect.php';
 	$link = getDB();
 	$cats=mysqli_query($link, "SELECT * from categories Group by Id");
 	?>
@@ -31,6 +32,10 @@
 	<?php endwhile; ?>
 	</table><center>
 	<!-- Stats: total posts, total images -->
-	<!-- PHP to load constant footer -->
+	<!-- PHP to load constant footer --><!-- DONE -->
+	<?php include ("footer.php") ?>
 	</body>
 </html>
+<?php
+	mysqli_close($link);
+?>
