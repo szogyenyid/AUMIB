@@ -12,9 +12,18 @@
 ?>
 
 <?php
-	$query = "SELECT * FROM threads WHERE CatId='" . $category . "' GROUP BY Id ASC;";
-	//echo $query;
-	$threads=mysqli_query($link, $query);
+	if(isset($_POST['newThr'])){
+		$query_insert = "INSERT INTO threads VALUES (NULL, '" . mysqli_real_escape_string($link, $_POST['title']) . "','" . mysqli_real_escape_string($link, $_POST['post']) . "','" . mysqli_real_escape_string($link, $_POST['imgurl']) . "', now(),'" . $category . "');";
+		//echo $query_insert;
+		mysqli_query($link, $query_insert);		
+	}
+
+?>
+
+<?php
+	$query_list = "SELECT * FROM threads WHERE CatId='" . $category . "' GROUP BY Id ASC;";
+	//echo $query_list;
+	$threads=mysqli_query($link, $query_list);
 ?>
 
 <html>
@@ -23,14 +32,20 @@
 	</head>
 	<body>
 		<!-- Header -->
-		<!-- Start new thread -->
+		<!-- Start new thread --><!-- DONE -->
+		<form action="board.php?cat=<?=$category?>" method="post">
+		Img-URL: <input type="text" name="imgurl"><br>
+		Title: <input type="text" name="title"><br>
+		Post: <input type="text" name="post"><br>
+		<input type="submit" value="Start" name="newThr">
+		</form>
+		<!-- List threads --><!-- DONE -->
 		<table>
 			<th>Img</th>
 			<th>Title</th>
 			<th>Post</th>
 			<th>Timestamp</th>
 			<th>Take a look</th>
-			<!-- List threads -->
 			<?php while ($row = mysqli_fetch_array($threads)): ?>
 			<tr>
 			<td><?= $row['Image'] ?></td>
@@ -44,3 +59,8 @@
 		<!-- Footer -->
 	</body>
 </html>
+
+
+<?php
+	mysqli_close($link);
+?>
