@@ -1,7 +1,9 @@
+
 <html>
 	<head>
 		<title>AUMIB</title>
 		<link rel="stylesheet" type="text/css" href="theme.css">
+		<link rel="icon" href="favicon.ico" type="image/ico">
 		<script src="konami.js"></script>
 	</head>
 <!--------------------------------------------------------------------------------->
@@ -59,6 +61,7 @@
 	</div>
 	</body>
 </html>
+
 <?php
 	mysqli_close($link);
 ?>

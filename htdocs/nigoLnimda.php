@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>AUMIB Admin</title>
+	<link rel="icon" href="favicon.ico" type="image/ico">
 </head>
 <!-------------------------------------------------------------->
 <body>

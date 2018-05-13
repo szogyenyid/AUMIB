@@ -24,6 +24,7 @@
 <html>
 	<head>
 		<title><?= $threadTitle?> - AUMIB</title>
+		<link rel="icon" href="favicon.ico" type="image/ico">
 	</head>
 	<body>
 		<!-- Header --><!-- DONE -->
