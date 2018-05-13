@@ -10,8 +10,10 @@
 	<center>
 	[ <a href = "index.php">Home</a>
 	<?php while($row = mysqli_fetch_array($catIds)): ?>
-		 /<a href="board.php?cat=<?= $row['Id']?>"> <?=$row['Id']?></a>
-	<?php endwhile; ?>]
+		 / <a href="board.php?cat=<?= $row['Id']?>"><?=$row['Id']?></a>
+	<?php endwhile; ?>
+	/ <a href="search.php">Search</a>
+	 ]
 	</center>
 	</body>
 </html>
