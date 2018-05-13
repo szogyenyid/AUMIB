@@ -5,8 +5,8 @@ index
 		categories(subtitle) !
 		table !
 			rows !
-		stats
-		footer
+		stats !
+		footer !
 		
 board
 	body
