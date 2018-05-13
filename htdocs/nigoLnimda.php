@@ -6,7 +6,7 @@
 <!-------------------------------------------------------------->
 <body>
 	<h1>Admin's control panel</h1>
-	<h3>Add new category<h3>
+	<h3>Add new category</h3>
 	<form action="nigoLnimda.php" method="post">
 		Abbr: <input type="text" name="abbr"><br>
 		Name: <input type="text" name="name"><br>
