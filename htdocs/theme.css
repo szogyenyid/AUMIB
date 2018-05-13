@@ -2,6 +2,11 @@
 	background-color: #a5e2ff;
 	height: 100%;
 }
+#headerbody{
+	background-color: #a5e2ff;
+	height: auto;
+	overflow: hidden;
+}
 
 #title{
 	text-align: center;
@@ -41,5 +46,64 @@
 	display: table-cell;
 	padding: 3px 10px;
 	border-bottom: 1px solid #006596;
+	text-align: center;
+}
+
+#thrTable{
+	display: table;
+	width: 80%;
+	margin: auto;
+	align: center;
+}
+#thrTableRow{
+	display: table-row;
+}
+#thrTableRow:nth-child(odd){
+	display: table-row;
+	background-color: #cceeff;
+}
+#thrTableHeader{
+	display: table-cell;
+	border-bottom: 3px solid #006596;
+	background-color: #60cbff;
+	font-weight:bold;
+	text-align: center;
+	padding: 2px;
+}
+#thrTableCell{
+	width: auto;
+	min-width: 140px;
+	display: table-cell;
+	padding: 3px 10px;
+	border-bottom: 1px solid #006596;
+	text-align: center;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-all;
+	vertical-align: middle;
+}
+#thrTableLinkCell{
+	width: auto;
+	min-width: 75px;
+	display: table-cell;
+	padding: 3px 10px;
+	border-bottom: 1px solid #006596;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#inputWrapper{
+	display: table;
+	text-align: center;
+	align: center;
+	margin: auto;
+}
+#inputRow{
+	display: table-row;
+	text-align: center;
+}
+#inputLabel{
+	display: table-cell;
+	padding: 3px 10px;
 	text-align: center;
 }

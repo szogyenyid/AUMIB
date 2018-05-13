@@ -9,12 +9,12 @@ index
 		footer !
 		
 board
-	body
-		header
-		title
-		newthread
-		threads
-		footer
+	body ! 
+		header !
+		title !
+		newthread !
+		threads !
+		footer !
 		
 thread
 	body

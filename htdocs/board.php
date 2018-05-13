@@ -30,35 +30,65 @@
 <html>
 	<head>
 		<title><?= $catName?> - AUMIB</title>
+		<link rel="stylesheet" type="text/css" href="theme.css">
+		<link rel="icon" href="favicon.ico" type="image/ico">
 	</head>
 	<body>
+	<div id="body">
 		<!-- Header --><!-- DONE -->
+		<div id="title"><?= $catName?> - AUMIB</div>
+		<div id="subtitle">Start new thread</div>
 		<!-- Start new thread --><!-- DONE -->
+		<div id="inputWrapper">
 		<form action="board.php?cat=<?=$category?>" method="post">
-		Img-URL: <input type="text" name="imgurl"><br>
-		Title: <input type="text" name="title"><br>
-		Post: <input type="text" name="post"><br>
+		
+		<div id="inputRow">
+		<div id="inputLabel">Img-URL:</div>
+		<div id="inputLabel"><input type="text" name="imgurl"></div>
+		</div>
+		
+		<div id="inputRow">
+		<div id="inputLabel">Title:</div>
+		<div id="inputLabel"><input type="text" name="title"></div>
+		</div>
+		
+		<div id="inputRow">
+		<div id="inputLabel">Post:</div>
+		<div id="inputLabel"><input type="text" name="post"></div>
+		</div>
+		
+		<div id="inputRow">
 		<input type="submit" value="Start" name="newThr">
+		</div>
 		</form>
+		</div>
 		<!-- List threads --><!-- DONE -->
-		<table>
-			<th>Img</th>
-			<th>Title</th>
-			<th>Post</th>
-			<th>Timestamp</th>
-			<th>Take a look</th>
+		<div id="thrTable">
+			<div id="thrTableRow">
+				<div id="thrTableHeader">Link</div>
+				<div id="thrTableHeader">Title</div>
+				<div id="thrTableHeader">Post</div>
+				<div id="thrTableHeader">Timestamp</div>
+				<div id="thrTableHeader">Take a look</div>
+			</div>
 			<?php while ($row = mysqli_fetch_array($threads)): ?>
-			<tr>
-			<td><?= $row['Image'] ?></td>
-			<td><?= $row['Title'] ?></td>
-			<td><?= $row['Post'] ?></td>
-			<td><?= $row['Datetime'] ?></td>
-			<td><a href="thread.php?id=<?= $row['Id']?>">View thread</a></td>
-			</tr>
+			<div id="thrTableRow">
+					<?php if(($row['Image']) == ""): ?>
+						<div id="thrTableCell">No link</div>
+					<?php else: ?>
+					<div id="thrTableLinkCell"><a href="//<?= $row['Image']?>">LINK</a></div> <!-- // for absolute link -->
+					<?php endif; ?>
+				<div id="thrTableCell"><?= $row['Title'] ?></div>
+				<div id="thrTableCell"><?= $row['Post'] ?></div>
+				<div id="thrTableCell"><?= $row['Datetime'] ?></div>
+				<div id="thrTableCell"><a href="thread.php?id=<?= $row['Id']?>">View thread</a></div>
+			</div>
 			<?php endwhile; ?>
-		</table>
+		</div>
+
 		<!-- Footer --><!-- DONE -->
 		<?php include ("footer.php") ?>
+		</div>
 	</body>
 </html>
 
