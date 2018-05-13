@@ -27,14 +27,30 @@
 		<link rel="icon" href="favicon.ico" type="image/ico">
 	</head>
 	<body>
+	<div id="body">
 		<!-- Header --><!-- DONE -->
+		<div id="title"><?= $threadTitle?> - AUMIB</div>
+		<div id="subtitle">Reply to thread</div>
 		<!-- New reply --><!-- DONE -->
+		<div id="inputWrapper">
 		<form action="thread.php?id=<?=$threadId?>" method="post">
-			Img-URL: <input type="text" name="imgurl"><br>
-			Reply: <input type="text" name="reply"><br>
-			<input type="submit" value="Reply" name="newReply">
+		
+		<div id="inputRow">
+		<div id="inputLabel">Img-URL:</div>
+		<div id="inputLabel"><input type="text" name="imgurl"></div>
+		</div>
+		
+		<div id="inputRow">
+		<div id="inputLabel">Reply:</div>
+		<div id="inputLabel"><input type="text" name="reply"></div>
+		</div>
+
+		<div id="inputRow">
+		<input type="submit" value="Reply" name="newReply">
+		</div>
 		</form>
-		<!-- Thread title and post --><!-- DONE -->
+		</div>
+		<!-- Thread title and post -->
 		<table>
 		<tr>
 			<td><?= $row['Image'] ?></td>
@@ -42,7 +58,7 @@
 			<td><?= $row['Post'] ?></td>
 			<td><?= $row['Datetime'] ?></td>
 		</tr>
-		<!-- Replies --><!-- DONE -->
+		<!-- Replies -->
 		<?php
 			$query_list = "SELECT * FROM replies WHERE ThrId=" . $threadId . ";";
 			//echo $query_list;
@@ -59,6 +75,7 @@
 		</table>
 		<!-- Footer --><!-- DONE -->
 		<?php include ("footer.php") ?>
+		</div>
 	</body>
 </html>
 
