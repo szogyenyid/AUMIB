@@ -6,6 +6,7 @@
 	</head>
 <!--------------------------------------------------------------------------------->
 	<body>
+	<div id = "body">
 	<!-- PHP to load constant header --><!-- DONE -->
 	<?php include("header.php") ?>
 	<?php
@@ -13,27 +14,29 @@
 	$link = getDB();
 	$cats=mysqli_query($link, "SELECT * from categories Group by Id");
 	?>
-	<center><h2>Categories</h2></center>
-	<center><table class="index">
-		<th class="index">Abbr</th>
-		<th class="index">Name</th>
-		<th class="index">Description</th>
-	<?php while ($row = mysqli_fetch_array($cats)): ?>
-		<tr class="index">
-		<?php $id = $row['Id']?>
+	<div id="title">Anonymous UnModerated ImageBoard</div>
+	<div id="subtitle">Categories</div>
+	
+	<div id="iTable">
+		<div id="iTableRow">
+			<div id="iTableHeader">Abbr</div>
+			<div id="iTableHeader">Name</div>
+			<div id="iTableHeader">Description</div>
+		</div>
+		<?php while ($row = mysqli_fetch_array($cats)): ?>
 		
-			<td class="index">
-			<a href="board.php?cat=<?= $id?>"><?= $id ?></a>
-			</td>
-			
-			<td class="index"><?= $row['Name'] ?></td>
-			<td class="index"><?= $row['Description'] ?></td>
-		</tr>
-	<?php endwhile; ?>
-	</table><center>
+		<div id="iTableRow">
+			<div id="iTableCell"><a href="board.php?cat=<?=$row['Id']?>"><?=$row['Id']?></a></div>
+			<div id="iTableCell"><?=$row['Name'] ?></div>
+			<div id="iTableCell"><?=$row['Description'] ?></div>
+		</div>
+		<?php endwhile; ?>
+	</div>
+
 	<!-- Stats: total posts, total images -->
 	<!-- PHP to load constant footer --><!-- DONE -->
 	<?php include ("footer.php") ?>
+	</div>
 	</body>
 </html>
 <?php

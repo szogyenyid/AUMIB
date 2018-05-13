@@ -1,14 +1,45 @@
-th.index, tr.index{
-	text-align: center;
-    padding: 8px;
-	border-bottom: 3px solid #f0f0f0;
-}
-td.index{
-	border-bottom: 1px solid #f0f0f0;
+#body{
+	background-color: #a5e2ff;
+	height: 100%;
 }
 
-table.index{
+#title{
 	text-align: center;
-	width: 750px;
-	padding: 5px;
+	font-size: 42;
+	font-weight: bold;
+	padding: 10px;
+}
+
+#subtitle{
+	text-align: center;
+	font-size: 30;
+	font-weight: bold;
+	padding: 10px;
+}
+
+#iTable{
+	display: table;
+	width: 40%;
+	margin: auto;
+	align: center;
+}
+
+#iTableRow{
+	display: table-row;
+}
+
+#iTableHeader{
+	display: table-cell;
+	border-bottom: 3px solid #006596;
+	background-color: #6bcfff;
+	font-weight:bold;
+	text-align: center;
+	padding: 2px;
+}
+
+#iTableCell{
+	display: table-cell;
+	padding: 3px 10px;
+	border-bottom: 1px solid #006596;
+	text-align: center;
 }
