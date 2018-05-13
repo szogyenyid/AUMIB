@@ -1,0 +1,26 @@
+index
+	body !
+		header !
+		title !
+		categories(subtitle) !
+		table !
+			rows !
+		stats
+		footer
+		
+board
+	body
+		header
+		title
+		newthread
+		threads
+		footer
+		
+thread
+	body
+		header
+		title
+		newreply
+		thread-starter
+		replies
+		footer
