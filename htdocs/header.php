@@ -1,7 +1,9 @@
 <html>
 	<head>
+	<link rel="stylesheet" type="text/css" href="theme.css">
 	</head>
 	<body>
+	<div id = "headerbody">
 	<?php
 	include 'connect.php';
 	$link = getDB();
@@ -15,6 +17,7 @@
 	/ <a href="search.php">Search</a>
 	 ]
 	</center>
+	</div>
 	</body>
 </html>
 <?php
