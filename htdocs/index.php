@@ -32,8 +32,28 @@
 		</div>
 		<?php endwhile; ?>
 	</div>
-
-	<!-- Stats: total posts, total images -->
+	<br><br><br>
+	<!-- Stats: total posts, total images --><!-- DONE -->
+	<?php 
+	$statqueryCat = "SELECT COUNT(Id) FROM categories;";
+	$statqueryThr = "SELECT COUNT(Id) FROM threads;";
+	$statqueryRep = "SELECT COUNT(Id) FROM replies;";
+	$resultCats = mysqli_fetch_array(mysqli_query($link, $statqueryCat))[0];
+	$resultThrs = mysqli_fetch_array(mysqli_query($link, $statqueryThr))[0];
+	$resultReps = mysqli_fetch_array(mysqli_query($link, $statqueryRep))[0];
+	?>
+	<div id="iTable">
+		<div id="iTableRow">
+			<div id="iTableHeader">Categories</div>
+			<div id="iTableHeader">Total threads</div>
+			<div id="iTableHeader">Total replies</div>
+		</div>
+		<div id="iTableRow">
+			<div id="iTableCell"><?=$resultCats?></div>
+			<div id="iTableCell"><?=$resultThrs?></div>
+			<div id="iTableCell"><?=$resultReps?></div>
+		</div>
+	</div>
 	<!-- PHP to load constant footer --><!-- DONE -->
 	<?php include ("footer.php") ?>
 	</div>
