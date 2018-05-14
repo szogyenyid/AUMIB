@@ -86,7 +86,7 @@
 			if($_POST['table'] == "replies") $query = $query."Reply='MODERÁLVA!', Image=''";
 			if($_POST['table'] == "threads") $query = $query."Post='MODERÁLVA!', Image=''";
 		endif;
-		$query = $query." WHERE Id=".$_POST['id'].";";
+		$query = $query." WHERE Id=".mysqli_real_escape_string($link, $_POST['id']).";";
 		//echo $query;
 		mysqli_query($link, $query);
 	}
