@@ -7,6 +7,13 @@
 	height: auto;
 	overflow: hidden;
 }
+#footerbody{
+	position: absolute;
+    bottom: 30px;
+	left: 50%;
+	width: 500px;
+	margin-left:-250px;
+}
 
 #title{
 	text-align: center;
@@ -17,7 +24,6 @@
 	word-wrap: break-word;
 	word-break: break-all;
 }
-
 #subtitle{
 	text-align: center;
 	font-size: 30;
@@ -34,11 +40,9 @@
 	margin: auto;
 	align: center;
 }
-
 #iTableRow{
 	display: table-row;
 }
-
 #iTableHeader{
 	display: table-cell;
 	border-bottom: 3px solid #006596;
@@ -47,7 +51,6 @@
 	text-align: center;
 	padding: 2px;
 }
-
 #iTableCell{
 	display: table-cell;
 	padding: 3px 10px;
@@ -104,7 +107,6 @@
 	margin: auto;
 	align: center;
 }
-
 #replyTableRow{
 	display: table-row;
 	width: 80%;
@@ -114,7 +116,6 @@
 	background: #4ca2ff;
 	font-weight:bold;
 }
-
 #replyTableCell_link{
 	width: auto;
 	width: 75px;
@@ -170,4 +171,11 @@
 	display: table-cell;
 	padding: 3px 10px;
 	text-align: center;
+}
+#inputWrapperLeft{
+	display: table;
+	text-align: center;
+	align: center;
+	margin: auto;
+	float:left;
 }
