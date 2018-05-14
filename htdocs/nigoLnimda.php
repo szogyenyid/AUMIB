@@ -6,16 +6,31 @@
 </head>
 <!-------------------------------------------------------------->
 <body>
-	<h1>Admin's control panel</h1>
-	<h3>Add new category</h3>
+<div id="body">
+	<div id="title">Admin's control panel</div>
+	<div id="inputWrapperLeft">
+	<div id="subtitle">Add new category</div>
 	<form action="nigoLnimda.php" method="post">
-		Abbr: <input type="text" name="abbr"><br>
-		Name: <input type="text" name="name"><br>
-		Desc: <input type="text" name="desc"><br>
-		<input type="submit" value="Add" name="newCat">
+	
+	<div id="inputRow">
+	<div id="inputLabel">Abbr:</div>
+	<div id="inputLabel"><input type="text" name="abbr"></div>
+	</div>
+	<div id="inputRow">
+	<div id="inputLabel">Name:</div>
+	<div id="inputLabel"><input type="text" name="name"></div>
+	</div>
+	<div id="inputRow">
+	<div id="inputLabel">Desc:</div>
+	<div id="inputLabel"><input type="text" name="desc"></div>
+	</div>
+	<div id="inputRow"><input type="submit" value="Add" name="newCat"></div>
 	</form>
+	</div>
+
 	<br>
 	<?php include ("footer.php") ?>
+</div>
 </body>
 </html>
 
