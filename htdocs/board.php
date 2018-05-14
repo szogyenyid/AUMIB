@@ -13,10 +13,12 @@
 ?>
 
 <?php
+	$failed = 0;
 	if(isset($_POST['newThr'])){
 		$query_insert = "INSERT INTO threads VALUES (NULL, '" . mysqli_real_escape_string($link, $_POST['title']) . "','" . mysqli_real_escape_string($link, $_POST['post']) . "','" . mysqli_real_escape_string($link, $_POST['imgurl']) . "', now(),'" . $category . "');";
 		//echo $query_insert;
-		mysqli_query($link, $query_insert);		
+		if(!($_POST['title']=="")) mysqli_query($link, $query_insert);
+		else $failed = 1;
 	}
 
 ?>
@@ -50,6 +52,7 @@
 		<div id="inputRow">
 		<div id="inputLabel">Title:</div>
 		<div id="inputLabel"><input type="text" name="title"></div>
+		<?php if($failed == 1) echo "All threads must have a title!"?>
 		</div>
 		
 		<div id="inputRow">

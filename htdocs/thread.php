@@ -13,10 +13,12 @@
 ?>
 
 <?php
+	$failed = 0;
 	if(isset($_POST['newReply'])){
 		$query_insert = "INSERT INTO replies VALUES(NULL, '". mysqli_real_escape_string($link, $_POST['reply']) . "', '" . mysqli_real_escape_string($link, $_POST['imgurl']) . "', now(), " . $threadId . ");";
 		//echo $query_insert;
-		mysqli_query($link, $query_insert);		
+		if(!($_POST['reply']=="")) mysqli_query($link, $query_insert);
+		else $failed=1;
 	}
 
 ?>
@@ -43,6 +45,7 @@
 		<div id="inputRow">
 		<div id="inputLabel">Reply:</div>
 		<div id="inputLabel"><input type="text" name="reply"></div>
+		<?php if($failed == 1) echo "All replies must have some text!"?>
 		</div>
 
 		<div id="inputRow">
