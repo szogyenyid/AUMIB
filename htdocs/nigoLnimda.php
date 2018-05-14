@@ -8,7 +8,7 @@
 <body>
 <div id="body">
 	<div id="title">Admin's control panel</div>
-	<div id="inputWrapperLeft">
+	<div id="inputWrapperCenter">
 	<div id="subtitle">Add new category</div>
 	<form action="nigoLnimda.php" method="post">
 	
@@ -27,7 +27,35 @@
 	<div id="inputRow"><input type="submit" value="Add" name="newCat"></div>
 	</form>
 	</div>
-
+	<br>
+	<div id="inputWrapperCenter">
+		<div id="subtitle">Edit content</div>
+		<form action="nigoLnimda.php" method="post">
+		<div id="inputRow">
+			<div id="inputLabel">Type:</div>
+			<div id="inputLabel">
+				<select name="table">
+					<option value="threads">Thread</option>
+					<option value="replies">Reply</option>
+				</select>
+			</div>
+		</div>
+		<div id="inputRow">
+			<div id="inputLabel">Action:</div>
+			<div id="inputLabel">
+				<select name="action">
+					<option value="delete">Delete</option>
+					<option value="update">Moderate</option>
+				</select>
+			</div>
+		</div>
+		<div id="inputRow">
+			<div id="inputLabel">Id:</div>
+			<div id="inputLabel"><input type="text" placeholder="id of content" name="id"></div>
+		</div>
+		<div id="inputRow"><input type="submit" value="Do it!" name="modify"></div>
+		</form>
+	</div>
 	<br>
 	<?php include ("footer.php") ?>
 </div>

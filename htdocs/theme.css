@@ -178,4 +178,20 @@
 	align: center;
 	margin: auto;
 	float:left;
+	margin-left: 10%;
+}
+#inputWrapperCenter{
+	display: table;
+	text-align: center;
+	align: center;
+	margin: auto;
+	float:center;
+}
+#inputWrapperRight{
+	display: table;
+	text-align: center;
+	align: center;
+	margin: auto;
+	float:right;
+	margin-right: 10%;
 }
