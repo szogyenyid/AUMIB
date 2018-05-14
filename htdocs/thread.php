@@ -36,7 +36,7 @@
 		<form action="thread.php?id=<?=$threadId?>" method="post">
 		
 		<div id="inputRow">
-		<div id="inputLabel">Img-URL:</div>
+		<div id="inputLabel">URL:</div>
 		<div id="inputLabel"><input type="text" name="imgurl"></div>
 		</div>
 		
@@ -59,14 +59,14 @@
 					<?php if (strpos($row['Image'], 'http') === false) {
 						$row['Image'] = 'http://' .$row['Image'];
 }					?>
-				<div id="replyTableCell_link"><a href="<?= $row['Image'] ?>">LINK</a></div>
+				<div id="replyTableCell_link"><a target="_blank" href="<?= $row['Image'] ?>">LINK</a></div>
 					<?php endif; ?>
 				<div id="replyTableCell"><?= $row['Title'] ?></div>
 				<div id="replyTableCell"><?= $row['Post'] ?></div>
 				<div id="replyTableCell_timestamp"><?= $row['Datetime'] ?></div>
 			</div>
 		</div>
-		<!-- Replies -->
+		<!-- Replies --><!-- DONE -->
 		<div id="replyTable">
 		<?php
 			$query_list = "SELECT * FROM replies WHERE ThrId=" . $threadId . ";";
@@ -81,7 +81,7 @@
 					<?php if (strpos($reply_row['Image'], 'http') === false) {
 						$reply_row['Image'] = 'http://' .$reply_row['Image'];
 }					?>
-				<div id="replyTableCell_link"><a href="<?=$reply_row['Image']?>">LINK</a></div>
+				<div id="replyTableCell_link"><a target="_blank" href="<?=$reply_row['Image']?>">LINK</a></div>
 					<?php endif; ?>
 				<div id="replyTableCell"><?= $reply_row['Reply'] ?></div>
 				<div id="replyTableCell_timestamp"><?= $reply_row['Datetime'] ?></div>

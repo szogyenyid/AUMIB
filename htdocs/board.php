@@ -43,7 +43,7 @@
 		<form action="board.php?cat=<?=$category?>" method="post">
 		
 		<div id="inputRow">
-		<div id="inputLabel">Img-URL:</div>
+		<div id="inputLabel">URL:</div>
 		<div id="inputLabel"><input type="text" name="imgurl"></div>
 		</div>
 		
@@ -79,7 +79,7 @@
 					<?php if (strpos($row['Image'], 'http') === false) {
 						$row['Image'] = 'http://' .$row['Image'];
 }					?>
-					<div id="thrTableLinkCell"><a href="<?=$row['Image']?>">LINK</a></div> <!-- // for absolute link -->
+					<div id="thrTableLinkCell"><a target="_blank" href="<?=$row['Image']?>">LINK</a></div> <!-- // for absolute link -->
 					<?php endif; ?>
 				<div id="thrTableCell"><?= $row['Title'] ?></div>
 				<div id="thrTableCell"><?= $row['Post'] ?></div>
