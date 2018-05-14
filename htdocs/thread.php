@@ -50,10 +50,17 @@
 		</div>
 		</form>
 		</div>
-		<!-- Thread title and post -->
+		<!-- Thread title and post --><!-- DONE -->
 		<div id="replyTable">
 			<div id="replyTableRow_head">
-				<div id="replyTableCell_link"><a href="http://www.google.com/webhp?#q=<?=$row['Image']?>&btnI=I">LINK</a></div>
+					<?php if(($row['Image']) == ""): ?>
+						<div id="replyTableCell_link">No link</div>
+					<?php else: ?>
+					<?php if (strpos($row['Image'], 'http') === false) {
+						$row['Image'] = 'http://' .$row['Image'];
+}					?>
+				<div id="replyTableCell_link"><a href="<?= $row['Image'] ?>">LINK</a></div>
+					<?php endif; ?>
 				<div id="replyTableCell"><?= $row['Title'] ?></div>
 				<div id="replyTableCell"><?= $row['Post'] ?></div>
 				<div id="replyTableCell_timestamp"><?= $row['Datetime'] ?></div>
@@ -68,7 +75,14 @@
 		?>
 		<?php while ($reply_row = mysqli_fetch_array($replies_here)): ?>
 			<div id="replyTableRow">
-				<div id="replyTableCell_link"><?= $reply_row['Image'] ?></div>
+					<?php if(($reply_row['Image']) == ""): ?>
+						<div id="replyTableCell_link">No link</div>
+					<?php else: ?>
+					<?php if (strpos($reply_row['Image'], 'http') === false) {
+						$reply_row['Image'] = 'http://' .$reply_row['Image'];
+}					?>
+				<div id="replyTableCell_link"><a href="<?=$reply_row['Image']?>">LINK</a></div>
+					<?php endif; ?>
 				<div id="replyTableCell"><?= $reply_row['Reply'] ?></div>
 				<div id="replyTableCell_timestamp"><?= $reply_row['Datetime'] ?></div>
 			</div>
