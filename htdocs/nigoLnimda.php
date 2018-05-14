@@ -73,3 +73,21 @@
 	}
 
 ?>
+
+<?php
+	if(isset($_POST['modify'])){
+		$link = getDB();
+		$query = "";
+		if($_POST['action'] == "delete"):
+			$query = $query."DELETE FROM ".$_POST['table'];
+		endif;
+		if($_POST['action'] == "update"):
+			$query = $query. "UPDATE ".$_POST['table']." SET ";
+			if($_POST['table'] == "replies") $query = $query."Reply='MODERÁLVA!', Image=''";
+			if($_POST['table'] == "threads") $query = $query."Post='MODERÁLVA!', Image=''";
+		endif;
+		$query = $query." WHERE Id=".$_POST['id'].";";
+		//echo $query;
+		mysqli_query($link, $query);
+	}
+?>
