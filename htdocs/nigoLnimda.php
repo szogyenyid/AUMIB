@@ -23,7 +23,7 @@
 	if(isset($_POST['newCat'])){
 		//include 'connect.php';
 		$link = getDB();
-		$query = "INSERT INTO categories VALUES ('" . mysqli_real_escape_string($link, $_POST['abbr']) . "','" . mysqli_real_escape_string($link, $_POST['name']) . "','" . mysqli_real_escape_string($link, $_POST['desc']) . "');";
+		$query = "INSERT INTO categories VALUES ('" . mysqli_real_escape_string($link, strtolower($_POST['abbr'])) . "','" . mysqli_real_escape_string($link, $_POST['name']) . "','" . mysqli_real_escape_string($link, $_POST['desc']) . "');";
 		//echo $query;
 		mysqli_query($link, $query);
 		mysqli_close($link);		
