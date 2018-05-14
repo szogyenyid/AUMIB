@@ -16,11 +16,11 @@ board
 		threads !
 		footer !
 		
-thread
-	body
-		header
-		title
-		newreply
-		thread-starter
-		replies
-		footer
+thread !
+	body !
+		header !
+		title !
+		newreply !
+		thread-starter !
+		replies !
+		footer !
