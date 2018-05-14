@@ -104,17 +104,49 @@
 	margin: auto;
 	align: center;
 }
+
 #replyTableRow{
 	display: table-row;
+	width: 80%;
 }
-#replyTableRow:nth-child(1){
+#replyTableRow_head{
 	display: table-row;
-	background-color: #60cbff;
+	background: #4ca2ff;
+	font-weight:bold;
+}
+
+#replyTableCell_link{
+	width: auto;
+	width: 75px;
+	display: table-cell;
+	border: 1px solid black;
+	padding: 3px 10px;
+	border-bottom: 1px solid #006596;
+	text-align: center;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-all;
+	vertical-align: middle;
+}
+#replyTableCell_timestamp{
+	width: auto;
+	width: 140px;
+	display: table-cell;
+	border: 1px solid black;
+	padding: 3px 10px;
+	border-bottom: 1px solid #006596;
+	text-align: center;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-all;
+	vertical-align: middle;
+	font-style: italic
 }
 #replyTableCell{
 	width: auto;
-	min-width: 140px;
+	min-width: 75px;
 	display: table-cell;
+	border: 1px solid black;
 	padding: 3px 10px;
 	border-bottom: 1px solid #006596;
 	text-align: center;

@@ -51,28 +51,29 @@
 		</form>
 		</div>
 		<!-- Thread title and post -->
-		<table>
-		<tr>
-			<td><?= $row['Image'] ?></td>
-			<td><?= $row['Title'] ?></td>
-			<td><?= $row['Post'] ?></td>
-			<td><?= $row['Datetime'] ?></td>
-		</tr>
+		<div id="replyTable">
+			<div id="replyTableRow_head">
+				<div id="replyTableCell_link"><a href="http://www.google.com/webhp?#q=<?=$row['Image']?>&btnI=I">LINK</a></div>
+				<div id="replyTableCell"><?= $row['Title'] ?></div>
+				<div id="replyTableCell"><?= $row['Post'] ?></div>
+				<div id="replyTableCell_timestamp"><?= $row['Datetime'] ?></div>
+			</div>
+		</div>
 		<!-- Replies -->
+		<div id="replyTable">
 		<?php
 			$query_list = "SELECT * FROM replies WHERE ThrId=" . $threadId . ";";
 			//echo $query_list;
 			$replies_here = mysqli_query($link, $query_list);
 		?>
 		<?php while ($reply_row = mysqli_fetch_array($replies_here)): ?>
-		<tr>
-			<td></td>
-			<td><?= $reply_row['Image'] ?></td>
-			<td><?= $reply_row['Reply'] ?></td>
-			<td><?= $reply_row['Datetime'] ?></td>
-		</tr>
+			<div id="replyTableRow">
+				<div id="replyTableCell_link"><?= $reply_row['Image'] ?></div>
+				<div id="replyTableCell"><?= $reply_row['Reply'] ?></div>
+				<div id="replyTableCell_timestamp"><?= $reply_row['Datetime'] ?></div>
+			</div>
 		<?php endwhile; ?>
-		</table>
+		</div>
 		<!-- Footer --><!-- DONE -->
 		<?php include ("footer.php") ?>
 		</div>
