@@ -90,6 +90,7 @@
 	word-wrap: break-word;
 	word-break: break-all;
 	vertical-align: middle;
+	white-space: normal;
 }
 #thrTableLinkCell{
 	width: auto;
@@ -155,6 +156,7 @@
 	word-wrap: break-word;
 	word-break: break-all;
 	vertical-align: middle;
+	white-space: normal;
 }
 
 #inputWrapper{
