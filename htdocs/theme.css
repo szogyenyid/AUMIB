@@ -118,7 +118,6 @@
 	font-weight:bold;
 }
 #replyTableCell_link{
-	width: auto;
 	width: 75px;
 	display: table-cell;
 	border: 1px solid black;
@@ -196,4 +195,47 @@
 	margin: auto;
 	float:right;
 	margin-right: 10%;
+}
+
+#sThrTable{
+	display: table;
+	width: 80%;
+	margin: auto;
+	align: center;
+}
+#sThrTableRow{
+	display: table-row;
+}
+#sThrTableRow:nth-child(odd){
+	display: table-row;
+	background-color: #cceeff;
+}
+#sThrTableHeader{
+	display: table-cell;
+	border-bottom: 3px solid #006596;
+	background-color: #60cbff;
+	font-weight:bold;
+	text-align: center;
+	padding: 2px;
+}
+#sThrTableCell{
+	width: auto;
+	display: table-cell;
+	padding: 3px 10px;
+	border-bottom: 1px solid #006596;
+	text-align: center;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-all;
+	vertical-align: middle;
+	white-space: normal;
+}
+#sThrTableShortCell{
+	width: auto;
+	width: 100px;
+	display: table-cell;
+	padding: 3px 10px;
+	border-bottom: 1px solid #006596;
+	text-align: center;
+	vertical-align: middle;
 }
