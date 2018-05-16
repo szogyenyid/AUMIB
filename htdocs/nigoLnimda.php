@@ -84,7 +84,7 @@
 		if($_POST['action'] == "update"):
 			$query = $query. "UPDATE ".$_POST['table']." SET ";
 			if($_POST['table'] == "replies") $query = $query."Reply='MODERÁLVA!', Image=''";
-			if($_POST['table'] == "threads") $query = $query."Post='MODERÁLVA!', Image=''";
+			if($_POST['table'] == "threads") $query = $query."Post='MODERÁLVA!', Title='MODERÁLVA!', Image=''";
 		endif;
 		$query = $query." WHERE Id=".mysqli_real_escape_string($link, $_POST['id']).";";
 		//echo $query;
